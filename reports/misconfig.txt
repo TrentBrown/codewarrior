@@ -1,0 +1,66 @@
+2021-10-13T11:12:03.046-0700	[34mINFO[0m	Need to update the built-in policies
+2021-10-13T11:12:03.049-0700	[34mINFO[0m	Downloading the built-in policies...
+2021-10-13T11:12:04.357-0700	[34mINFO[0m	Detected config files: 5
+
+mysql-exporter/Dockerfile (dockerfile)
+======================================
+Tests: 23 (SUCCESSES: 22, FAILURES: 1, EXCEPTIONS: 0)
+Failures: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+
++---------------------------+------------+--------------------+----------+------------------------------------------+
+|           TYPE            | MISCONF ID |       CHECK        | SEVERITY |                 MESSAGE                  |
++---------------------------+------------+--------------------+----------+------------------------------------------+
+| Dockerfile Security Check |   DS001    | ':latest' tag used |  MEDIUM  | Specify a tag in the 'FROM' statement    |
+|                           |            |                    |          | for image 'quay.io/prometheus/busybox'   |
+|                           |            |                    |          | -->avd.aquasec.com/appshield/ds001       |
++---------------------------+------------+--------------------+----------+------------------------------------------+
+
+mysql/Dockerfile (dockerfile)
+=============================
+Tests: 23 (SUCCESSES: 22, FAILURES: 1, EXCEPTIONS: 0)
+Failures: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+
++---------------------------+------------+--------------------+----------+------------------------------------------+
+|           TYPE            | MISCONF ID |       CHECK        | SEVERITY |                 MESSAGE                  |
++---------------------------+------------+--------------------+----------+------------------------------------------+
+| Dockerfile Security Check |   DS001    | ':latest' tag used |  MEDIUM  | Specify a tag in the 'FROM'              |
+|                           |            |                    |          | statement for image 'mysql'              |
+|                           |            |                    |          | -->avd.aquasec.com/appshield/ds001       |
++---------------------------+------------+--------------------+----------+------------------------------------------+
+
+nginx/Dockerfile (dockerfile)
+=============================
+Tests: 23 (SUCCESSES: 23, FAILURES: 0, EXCEPTIONS: 0)
+Failures: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
+
+prometheus/Dockerfile (dockerfile)
+==================================
+Tests: 23 (SUCCESSES: 21, FAILURES: 2, EXCEPTIONS: 0)
+Failures: 2 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 1, CRITICAL: 0)
+
++---------------------------+------------+--------------------+----------+------------------------------------------+
+|           TYPE            | MISCONF ID |       CHECK        | SEVERITY |                 MESSAGE                  |
++---------------------------+------------+--------------------+----------+------------------------------------------+
+| Dockerfile Security Check |   DS001    | ':latest' tag used |  MEDIUM  | Specify a tag in the 'FROM'              |
+|                           |            |                    |          | statement for image 'prom/prometheus'    |
+|                           |            |                    |          | -->avd.aquasec.com/appshield/ds001       |
++                           +------------+--------------------+----------+------------------------------------------+
+|                           |   DS002    | root user          |   HIGH   | Specify at least 1 USER                  |
+|                           |            |                    |          | command in Dockerfile with               |
+|                           |            |                    |          | non-root user as argument                |
+|                           |            |                    |          | -->avd.aquasec.com/appshield/ds002       |
++---------------------------+------------+--------------------+----------+------------------------------------------+
+
+wordpress/Dockerfile (dockerfile)
+=================================
+Tests: 23 (SUCCESSES: 22, FAILURES: 1, EXCEPTIONS: 0)
+Failures: 1 (UNKNOWN: 0, LOW: 0, MEDIUM: 1, HIGH: 0, CRITICAL: 0)
+
++---------------------------+------------+--------------------+----------+------------------------------------------+
+|           TYPE            | MISCONF ID |       CHECK        | SEVERITY |                 MESSAGE                  |
++---------------------------+------------+--------------------+----------+------------------------------------------+
+| Dockerfile Security Check |   DS001    | ':latest' tag used |  MEDIUM  | Specify a tag in the 'FROM'              |
+|                           |            |                    |          | statement for image 'wordpress'          |
+|                           |            |                    |          | -->avd.aquasec.com/appshield/ds001       |
++---------------------------+------------+--------------------+----------+------------------------------------------+

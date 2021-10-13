@@ -1,0 +1,12 @@
+2021-10-13T11:07:52.158-0700	[34mINFO[0m	Number of language-specific files: 2
+2021-10-13T11:07:52.159-0700	[34mINFO[0m	Detecting gobinary vulnerabilities...
+
+bin/prometheus (gobinary)
+=========================
+Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
+
+bin/promtool (gobinary)
+=======================
+Total: 0 (UNKNOWN: 0, LOW: 0, MEDIUM: 0, HIGH: 0, CRITICAL: 0)
+
